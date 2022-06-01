@@ -9,6 +9,10 @@
   --third-bg-color: #f5f4fa;
 }
 
+html {
+  box-sizing: border-box;
+}
+
 /* General */
 
 body {
@@ -21,6 +25,8 @@ body {
 }
 
 .logo {
+  display: block;
+
   font-family: 'Raleway', sans-serif;
   font-weight: 700;
   font-size: 26px;
@@ -28,6 +34,7 @@ body {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
+  /* padding: 60px 1240px 161px 215px; */
 }
 
 .button:hover,
@@ -58,6 +65,19 @@ body {
   text-decoration: none;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .footer-contacts:hover,
 .footer-contacts:focus,
 .header-contacts:hover,
@@ -70,6 +90,20 @@ body {
 .features-list,
 .footer-list {
   list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.team-list {
+  display: flex;
+}
+
+.teammate {
+  width: calc((100%-90) / 4);
+}
+
+.teammate:not(:last-child) {
+  margin-right: 30px;
 }
 
 h1 {
@@ -86,6 +120,46 @@ h2 {
   color: var(--title-text-color);
 }
 
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+}
+
+ul {
+  margin: 0;
+}
+
+.container {
+  margin: 0 auto;
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.images-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.images-item {
+  width: calc((100% - 60) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.images-item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.images-item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
 /* Studia */
 
 /* Header */
@@ -93,7 +167,24 @@ h2 {
   color: var(--title-text-color);
 }
 
+/* Main Info */
+
+.main-info {
+  display: flex;
+  align-items: center;
+  /* justify-content: flex-end; */
+}
+
 /* Site nav */
+.site-nav {
+  display: flex;
+  margin-left: 93px;
+}
+
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+
 .site-nav .link {
   color: var(--title-text-color);
   font-weight: 500;
@@ -111,13 +202,27 @@ h2 {
   color: var(--accent-color);
 }
 
+/* Contacts-list */
+
+.contacts-list {
+  display: flex;
+  margin-left: auto;
+}
+
+.contacts-list .item + .item {
+  margin-left: 50px;
+}
 /* Hero */
 .hero {
   background-color: var(--second-bg-color);
+  text-align: center;
+  margin-bottom: 94px;
 }
 
 .hero-title {
   color: var(--hero-text-color);
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /* Features */
@@ -126,11 +231,24 @@ h2 {
   color: var(--title-text-color);
 }
 
+.features-list {
+  display: flex;
+}
+
+.features-item {
+  width: calc((100%-90) / 4);
+}
+
+.features-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .title {
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 
 .title-features {
@@ -140,6 +258,8 @@ h2 {
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
+  margin-top: 0;
+  margin-bottom: 10px;
 }
 
 .features-text {
@@ -155,7 +275,23 @@ h2 {
 
 /* Pictures */
 
+.images-list {
+  display: flex;
+}
+
+.picture-item {
+  width: calc((100%-60) / 3);
+}
+
+.picture-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 /* Section */
+.section {
+  margin-bottom: 94px;
+}
+
 .section-title {
   color: var(--title-text-color);
   font-weight: 700;
@@ -163,6 +299,8 @@ h2 {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
+  margin-top: 0;
+  margin-bottom: 50px;
 }
 
 .team-section {
@@ -172,6 +310,7 @@ h2 {
 /* Studio-Button */
 
 .button.primary {
+  min-width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -181,15 +320,29 @@ h2 {
   color: var(--hero-text-color);
   background-color: var(--accent-color);
   cursor: pointer;
+  border-radius: 4px;
+  padding: 10px 32px;
 }
 
 /* Portfolio */
+
+.portfolio-header {
+  margin-bottom: 94px;
+}
 
 .portfolio-main {
   background-color: var(--header-bg-color);
 }
 
+.button-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .button {
+  display: inline-block;
+  border: 0;
   font-family: inherit;
   color: var(--title-text-color);
   background-color: var(--third-bg-color);
@@ -199,6 +352,12 @@ h2 {
   text-align: center;
   letter-spacing: 0.03em;
   cursor: pointer;
+  border-radius: 4px;
+  padding: 6px 22px;
+}
+
+.button-list .item + .item {
+  margin-left: 8px;
 }
 
 .tech-title {
