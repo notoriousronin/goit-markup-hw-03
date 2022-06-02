@@ -18,6 +18,11 @@ html {
 body {
   color: var(--primary-text-color);
   font-family: Roboto, sans-serif;
+  font-size: 14px;
+}
+
+div {
+  display: block;
 }
 
 .link {
@@ -34,8 +39,6 @@ body {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
-  padding-top: 24px;
-  padding-bottom: 25px;
 }
 
 .button:hover,
@@ -124,7 +127,8 @@ ul {
 }
 
 .container {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
@@ -133,11 +137,11 @@ ul {
 .images-container {
   display: flex;
   flex-wrap: wrap;
-  padding-bottom: 94px;
+  
 }
 
 .images-item {
-  width: calc((100% - 60) / 3);
+  width: calc((100% - 60px) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
@@ -162,7 +166,6 @@ ul {
 .main-info {
   display: flex;
   align-items: center;
-  /* justify-content: flex-end; */
 }
 
 /* Site nav */
@@ -176,6 +179,9 @@ ul {
 }
 
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -206,13 +212,13 @@ ul {
 .hero {
   background-color: var(--second-bg-color);
   text-align: center;
-  margin-bottom: 94px;
+
+  padding: 200px 0;
 }
 
 .hero-title {
   color: var(--hero-text-color);
-  margin-top: 0;
-  margin-bottom: 30px;
+  margin: 0 auto 30px;
 }
 
 /* Features */
@@ -225,26 +231,25 @@ ul {
   display: flex;
 }
 
-.features-item {
-  width: calc((100%-90) / 4);
-}
-
 .features-item:not(:last-child) {
   margin-right: 30px;
 }
 
+.features-item {
+  width: calc((100%-90) / 4);
+}
+
 .title {
+  margin-bottom: 10px;
+  text-align: center;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
-  margin-bottom: 10px;
-  padding-left: 60px;
-  padding-right: 59px;
 }
 
 .human {
-  margin-bottom: 30px;
+  display: block;
 }
 
 .title-features {
@@ -267,9 +272,7 @@ ul {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
-  padding-left: 70px;
-  padding-right: 70px;
-  padding-bottom: 30px;
+  text-align: center;
 }
 
 /* Pictures */
@@ -292,8 +295,14 @@ ul {
 }
 
 /* Section */
-.section {
-  margin-bottom: 94px;
+
+.section-first {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+
+.section-second {
+  padding-bottom: 94px;
 }
 
 .section-title {
@@ -303,12 +312,14 @@ ul {
   line-height: 1.16;
   text-align: center;
   letter-spacing: 0.03em;
-  margin-top: 0;
+
   margin-bottom: 50px;
 }
 
 .team-section {
   background-color: var(--third-bg-color);
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 /* Team */
@@ -319,6 +330,7 @@ ul {
 
 .teammate {
   width: calc((100%-90) / 4);
+  background-color: #ffffff;
 }
 
 .teammate:not(:last-child) {
@@ -326,14 +338,16 @@ ul {
 }
 
 .pictures-text {
+  padding: 24px 24px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
 }
 
-/* .description {
-  display: flex;
-} */
+.description {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 
 /* Studio-Button */
 
@@ -355,12 +369,14 @@ ul {
 /* Portfolio */
 
 .portfolio-header {
-  margin-bottom: 94px;
   border-bottom: 1px solid #ececec;
 }
 
 .portfolio-main {
   background-color: var(--header-bg-color);
+  padding-top: 94px;
+    padding-bottom: 94px;
+}
 }
 
 .button-list {
@@ -389,10 +405,16 @@ ul {
   margin-left: 8px;
 }
 
+
+.button-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
 .tech-title {
   margin-bottom: 4px;
-  padding-left: 24px;
-  padding-right: 24px;
+  
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -401,22 +423,15 @@ ul {
 }
 
 .tech-text {
-  padding-left: 24px;
-  padding-right: 24px;
-  padding-bottom: 20px;
+  margin-bottom: 0;
+  margin-top: 0;
   font-size: 16px;
-  line-height: 1.8;
+  line-height: 1.88;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
 
-.pictures-list {
-  text-decoration: none;
-}
 
-.portfolio-logos {
-  margin-bottom: 20px;
-}
 
 /* Footer */
 .studio-footer {
@@ -425,6 +440,8 @@ ul {
 
 .footer {
   background-color: var(--second-bg-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .location {
@@ -436,15 +453,15 @@ ul {
   text-decoration: none;
 }
 
-.logo-item {
-  margin-top: 60px;
+.container > .logo-item {
+  display: inline-block;
   margin-bottom: 20px;
+}
+
+.container > .logo {
+  display: inline-block;
 }
 
 .location-item {
   margin-bottom: 9px;
-}
-
-.location-item:nth-last-child(1) {
-  padding-bottom: 60px;
 }
