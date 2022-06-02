@@ -34,7 +34,8 @@ body {
   letter-spacing: 0.03em;
   color: var(--accent-color);
   text-decoration: none;
-  /* padding: 60px 1240px 161px 215px; */
+  padding-top: 24px;
+  padding-bottom: 25px;
 }
 
 .button:hover,
@@ -94,18 +95,6 @@ body {
   margin: 0;
 }
 
-.team-list {
-  display: flex;
-}
-
-.teammate {
-  width: calc((100%-90) / 4);
-}
-
-.teammate:not(:last-child) {
-  margin-right: 30px;
-}
-
 h1 {
   font-weight: 900;
   font-size: 44px;
@@ -144,6 +133,7 @@ ul {
 .images-container {
   display: flex;
   flex-wrap: wrap;
+  padding-bottom: 94px;
 }
 
 .images-item {
@@ -249,6 +239,12 @@ ul {
   line-height: 1.18;
   letter-spacing: 0.03em;
   margin-bottom: 10px;
+  padding-left: 60px;
+  padding-right: 59px;
+}
+
+.human {
+  margin-bottom: 30px;
 }
 
 .title-features {
@@ -271,6 +267,9 @@ ul {
   font-size: 16px;
   line-height: 1.18;
   letter-spacing: 0.03em;
+  padding-left: 70px;
+  padding-right: 70px;
+  padding-bottom: 30px;
 }
 
 /* Pictures */
@@ -285,6 +284,11 @@ ul {
 
 .picture-item:not(:last-child) {
   margin-right: 30px;
+}
+
+.direction {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Section */
@@ -307,6 +311,30 @@ ul {
   background-color: var(--third-bg-color);
 }
 
+/* Team */
+
+.team-list {
+  display: flex;
+}
+
+.teammate {
+  width: calc((100%-90) / 4);
+}
+
+.teammate:not(:last-child) {
+  margin-right: 30px;
+}
+
+.pictures-text {
+  border-left: 1px solid #eeeeee;
+  border-right: 1px solid #eeeeee;
+  border-bottom: 1px solid #eeeeee;
+}
+
+/* .description {
+  display: flex;
+} */
+
 /* Studio-Button */
 
 .button.primary {
@@ -328,6 +356,7 @@ ul {
 
 .portfolio-header {
   margin-bottom: 94px;
+  border-bottom: 1px solid #ececec;
 }
 
 .portfolio-main {
@@ -361,6 +390,9 @@ ul {
 }
 
 .tech-title {
+  margin-bottom: 4px;
+  padding-left: 24px;
+  padding-right: 24px;
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -369,6 +401,9 @@ ul {
 }
 
 .tech-text {
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 20px;
   font-size: 16px;
   line-height: 1.8;
   letter-spacing: 0.03em;
@@ -377,6 +412,10 @@ ul {
 
 .pictures-list {
   text-decoration: none;
+}
+
+.portfolio-logos {
+  margin-bottom: 20px;
 }
 
 /* Footer */
@@ -395,4 +434,17 @@ ul {
   line-height: 1.71;
   letter-spacing: 0.03em;
   text-decoration: none;
+}
+
+.logo-item {
+  padding-top: 60px;
+  margin-bottom: 20px;
+}
+
+.location-item {
+  margin-bottom: 9px;
+}
+
+.location-item:nth-last-child(1) {
+  padding-bottom: 60px;
 }
