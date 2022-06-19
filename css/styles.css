@@ -141,7 +141,6 @@ ul {
 .images-container {
   display: flex;
   flex-wrap: wrap;
-  
 }
 
 .images-item {
@@ -240,7 +239,7 @@ ul {
 }
 
 .features-item {
-  width: calc((100%-90) / 4);
+  width: calc((100%-120) / 4);
 }
 
 .title {
@@ -379,8 +378,7 @@ ul {
 .portfolio-main {
   background-color: var(--header-bg-color);
   padding-top: 94px;
-    padding-bottom: 94px;
-}
+  padding-bottom: 94px;
 }
 
 .button-list {
@@ -409,7 +407,6 @@ ul {
   margin-left: 8px;
 }
 
-
 .button-list {
   display: flex;
   justify-content: center;
@@ -418,7 +415,7 @@ ul {
 
 .tech-title {
   margin-bottom: 4px;
-  
+
   font-weight: 700;
   font-size: 18px;
   line-height: 2;
@@ -434,8 +431,6 @@ ul {
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
 }
-
-
 
 /* Footer */
 .studio-footer {
